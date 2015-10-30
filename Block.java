@@ -3,10 +3,10 @@ package breakout;
 import java.awt.*;
 
 public class Block{
-		int bWidth;
-		int bHeight;
-		int yposition;
-		int xposition;//pixels to the left side of the screen
+		int bWidth;//Width of block
+		int bHeight;//Height of block
+		int yposition;//pixels from the top of the screen
+		int xposition;//pixels from the left side of the screen
 		private Ball ball;
 		private Breakout breakout;
 		int i;
@@ -15,9 +15,9 @@ public class Block{
 		int left;
 		int right;
 		int centerX;
-		int centerY;
+		int centerY;//Center of Ball
 		boolean noTiles;
-		Block(Ball ball,int i, Breakout breakout){
+		Block(Ball ball,int i, Breakout breakout){//contructor for Block
 			this.i = i;
 			this.breakout = breakout;
 			this.ball = ball;
