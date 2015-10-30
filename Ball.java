@@ -13,12 +13,14 @@ public class Ball {
 	int balls = 3;
 	private Bar bar;
 	private Breakout breakout;
-	Ball(Bar bar,Breakout breakout){
+	
+	public Ball(Bar bar, Breakout breakout){
 		this.bar = bar;
 		this.breakout = breakout;
 		isMoving = false;
 	}
-	void updateForNewFrame() {//checks if ball hits wall or bar, if not moves it sqrt(200) pixels in current direction
+	
+	public void updateForNewFrame() {//checks if ball hits wall or bar, if not moves it sqrt(200) pixels in current direction
         	if(isMoving){
             		if(ballX-10 < 0){
             			if(northWest){
@@ -104,7 +106,8 @@ public class Ball {
             		}
 	 	}
     	}
-	void draw(Graphics g){
+    	
+	public void draw(Graphics g){
 		if(!isMoving){
 			ballY = bar.squareTop-20;
 			ballX = bar.squareLeft+60;
